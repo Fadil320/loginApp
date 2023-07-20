@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="loginApp.MainPage">
+
+    <ContentPage.Background>
+        <LinearGradientBrush EndPoint="0,1">
+            <GradientStop Color="#75C2F6"
+                          Offset="0.1" />
+            <GradientStop Color="#1D5D9B"
+                          Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Text="Sign-In" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" TextColor="#F4D160" FontAttributes="Bold" FontSize="20"/>
+        <VerticalStackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+            <Label Text="Email" HorizontalOptions="Start" VerticalOptions="Start" TextColor="#F4D160" FontAttributes="Bold" />
+            <HorizontalStackLayout Spacing="10">
+                <Image Source="mail.png" HorizontalOptions="Start" WidthRequest="40"/>
+                <Entry WidthRequest="250" BackgroundColor="#FBEEAC" TextColor="White"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+        <VerticalStackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+            <Label Text="Password" HorizontalOptions="Start" VerticalOptions="Start" TextColor="#F4D160" FontAttributes="Bold" />
+            <HorizontalStackLayout Spacing="10">
+                <Image Source="key.png" HorizontalOptions="Start" WidthRequest="40"/>
+                <Entry WidthRequest="250" BackgroundColor="#FBEEAC" TextColor="White"/>
+            </HorizontalStackLayout>
+            <Label HorizontalOptions="End">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Forgot password?"
+                  TextColor="#F4D160">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding TapCommand}"
+                                          CommandParameter="https://youtu.be/BBJa32lCaaY"/>
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+        </VerticalStackLayout>
+
+    </Grid>
+    
+
+
+</ContentPage>
